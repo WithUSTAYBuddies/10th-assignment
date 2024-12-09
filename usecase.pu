@@ -5,9 +5,15 @@ package system{
     usecase "UNIVERSAL PASSPORT" as f2
     usecase "学校からのお知らせ"as f3
     usecase "授業からのお知らせ"as f4
+    usecase "時間割" as f5
+    usecase "教材" as f6
+    usecase "科目からのお知らせ" as f7
 }
 :学生:-->(f1)
 :学生:-->(f2)
 :学生:-->(f3)
 :学生:-->(f4)
+:f2:-->(f5)
+:f1:-->(f6)
+:f1:-->(f7)
 @enduml
