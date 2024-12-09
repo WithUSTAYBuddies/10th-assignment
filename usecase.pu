@@ -1,6 +1,6 @@
 @startuml
 left to right direction
-package system{
+package el-Campus{
     usecase "履修科目" as f1
     usecase "UNIVERSAL PASSPORT" as f2
     usecase "学校からのお知らせ"as f3
