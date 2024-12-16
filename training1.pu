@@ -1,10 +1,10 @@
 @startuml
-participant client as "クライアント"
-participant server as "サーバー"
-participant database as "データベース"
+participant c as "Client" 
+participant s as "Server" 
+participant d as "Database" 
 
-client -> server : データを要求
-server -> database : 問い合わせ
-database -->server : 結果を返す
-server--> client : 取得したデータを返す
+c-> s : データを要求
+s -> d : 問い合わせ
+d -->s : 結果を返す
+s --> c : 取得したデータを返す
 @enduml
