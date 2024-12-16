@@ -1,11 +1,15 @@
 @startuml
-participant main_function as "メイン関数"
-participant calculate  as "calculate()関数"
-participant getinput as "getInput()関数"
+participant m as "メイン関数" 
+participant c as "calculate()関数"  
+participant g as "getInput()関数" 
 
-main_function -> calculate : 呼び出す
-calculate -> getinput : 呼び出す
-getinput --> calculate : 入力データを返す
-calculate --> main_function : 計算結果を返す 
-
+activate m
+m -> c : 呼び出す
+activate c
+c -> g : 呼び出す
+activate g
+g --> c : 入力データを返す
+deactivate g
+c --> m : 計算結果を返す 
+deactivate c
 @enduml
